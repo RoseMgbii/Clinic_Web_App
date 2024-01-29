@@ -1,0 +1,25 @@
+Breadcrumb Navigation in website design and creation
+The term "breadcrumb" in the context of a webpage refers to a navigational aid that helps users understand the hierarchy and structure of a website. Breadcrumbs typically appear near the top of a webpage and display a trail of links, representing the path from the homepage to the current page.
+
+The term "breadcrumb" is derived from the Hansel and Gretel fairy tale, where breadcrumbs are used to mark a trail through the forest.
+Similarly, on a website, breadcrumbs provide users with a trail of links to easily navigate back to higher-level pages or the homepage.
+
+For example, a breadcrumb trail for a product page on an e-commerce website might look like this:
+Home > Category > Subcategory > Product. In our case, in the create.blade.php file under the doctor folder,
+We have
+            <div class="col-lg-4">
+                <nav class="breadcrumb-container" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="../index.html"><i class="ik ik-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#">Doctor</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Create</li>
+                    </ol>
+                </nav>
+            </div>
+This div creates the breadcrumb in the page header,
+And the breadcrumb looks like this: Home > Doctor > Create OR Home / Doctor / Create
+
+Users can click on any part of the breadcrumb trail to quickly navigate to a higher-level page.
+Breadcrumbs are a useful feature for enhancing the user experience and making website navigation more intuitive.
