@@ -16,12 +16,35 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
+        //Do this
         Role::create(['name'=> 'doctor']);
         Role::create(['name'=>'admin']);
         Role::create(['name'=>'patient']);
 
+        //OR
+        /*
+        $roles = [
+            [
+                'name'=>'doctor'
+            ],
+            [
+                'name'=>'admin'
+            ],
+            [
+                'name'=>'patient'
+            ]
+        ];
+
+
+        foreach($roles as $role){
+            Role::create($role);
+        }
+        */
+        //the second is better especially at adding new records
+
+
         //Create 5 dummy People records
-        People::factory(5)->create();
+//        People::factory(3)->create();
 
 
         // \App\Models\User::factory(10)->create();

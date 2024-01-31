@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Factories;
+use App\Models\People;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -16,14 +17,12 @@ class PeopleFactory extends Factory
      */
     public function definition(): array
     {
-        $created_at = Carbon::parse('2023-05-10')->setTimestamp('UTC');
+//        $created_at= Carbon::parse('2023-3-01');
 
         return [
             'name' => fake()->name(),
             'phone_number' => fake()->phoneNumber(),
             'email' => fake()->unique()->safeEmail(),
-            'created_at' => $created_at,
-
         ];
     }
 }

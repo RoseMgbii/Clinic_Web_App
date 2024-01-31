@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AddOneJobController;
+use App\Http\Controllers\PeopleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('add-one',AddOneJobController::class);
+Route::get('get-records', [PeopleController::class,'index']);
+Route::get('specific', [PeopleController::class, 'show']);
